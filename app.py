@@ -6,6 +6,7 @@ from langchain.agents import create_react_agent, AgentExecutor
 from langchain.prompts import PromptTemplate
 from langchain import hub
 
+from decouple import config
 
 st.set_page_config(
     page_title='Estoque GPT',
@@ -27,7 +28,7 @@ st.write('Faça perguntas sobre o estoque de produto, preços e reposições.')
 user_question = st.text_input('O que deseja saber?')
 
 model = ChatOpenAI(
-    api_key='SUAAPIKEY',
+    api_key=config('OPENAI_API_KEY'),
     model=selected_model
     )
 
