@@ -1,0 +1,14 @@
+.env
+/venv
+*.venv
+/.venv
+
+# IDEs
+.vscode/
+.idea/
+
+# cpython
+*.cpython*
+
+# pycahce
+__pycache__
